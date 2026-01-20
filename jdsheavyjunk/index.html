@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Local, family-run startup junk removal & haul-off in San Antonio. Small-to-medium pickups now as we scale into full heavy capacity. Fast photo quotes." />
+  <title>JD’s Heavy Junk Removal | San Antonio Junk Removal & Haul-Off</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="JD’s Heavy Junk Removal" />
+  <meta property="og:description" content="San Antonio junk removal & haul-off. Small-to-medium pickups now as we scale into full heavy capacity. Fast photo quotes." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Basic styling (no framework) -->
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --card:#101826;
+      --text:#e8edf5;
+      --muted:#b6c0d1;
+      --line:rgba(255,255,255,.10);
+      --green:#4ade80; /* clean green */
+      --green2:#22c55e;
+      --shadow: 0 14px 40px rgba(0,0,0,.35);
+      --radius:18px;
+      --max:1120px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 700px at 20% -10%, rgba(34,197,94,.25), transparent 60%),
+                  radial-gradient(900px 600px at 110% 10%, rgba(74,222,128,.18), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.5;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px;}
+
+    /* Header */
+    header{
+      position:sticky; top:0; z-index:20;
+      backdrop-filter: blur(10px);
+      background: rgba(11,15,20,.68);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px; padding:14px 0;
+    }
+    .brand{display:flex; align-items:center; gap:10px; text-decoration:none;}
+    .mark{
+      width:38px; height:38px; border-radius:12px;
+      background: linear-gradient(135deg, rgba(74,222,128,.95), rgba(34,197,94,.75));
+      display:grid; place-items:center;
+      box-shadow: 0 10px 25px rgba(34,197,94,.25);
+      border:1px solid rgba(255,255,255,.18);
+      font-weight:900; letter-spacing:-.5px;
+      color:#07110a;
+    }
+    .brand span{font-weight:800; letter-spacing:-.3px;}
+    nav ul{list-style:none; padding:0; margin:0; display:flex; gap:14px; align-items:center;}
+    nav a{opacity:.9; text-decoration:none; padding:10px 10px; border-radius:12px;}
+    nav a:hover{background: rgba(255,255,255,.06); opacity:1;}
+    .nav-cta{display:flex; gap:10px; align-items:center;}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px; padding:10px 14px; border-radius:14px;
+      border:1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.06);
+      text-decoration:none; font-weight:700;
+    }
+    .btn:hover{background: rgba(255,255,255,.10)}
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(74,222,128,.95), rgba(34,197,94,.80));
+      color:#07110a;
+      border:1px solid rgba(255,255,255,.20);
+    }
+    .btn.primary:hover{filter:brightness(1.02)}
+
+    /* Hero */
+    .hero{padding:46px 0 24px;}
+    .hero-grid{display:grid; grid-template-columns: 1.15fr .85fr; gap:18px; align-items:stretch;}
+    .hero-card{
+      background: rgba(16,24,38,.85);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 26px;
+    }
+    .kicker{
+      display:inline-flex; gap:8px; align-items:center;
+      font-weight:700; font-size:13px; color: var(--muted);
+      padding:8px 10px; border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.05);
+    }
+    .dot{width:8px; height:8px; border-radius:99px; background: var(--green); box-shadow: 0 0 0 4px rgba(74,222,128,.12);}
+    h1{margin:14px 0 10px; font-size:44px; line-height:1.08; letter-spacing:-1.2px;}
+    .sub{margin:0 0 18px; color: var(--muted); font-size:16px; max-width: 58ch;}
+    .hero-actions{display:flex; flex-wrap:wrap; gap:10px; margin-top:14px;}
+
+    .mini{
+      margin-top:18px;
+      display:grid; grid-template-columns: 1fr 1fr;
+      gap:10px;
+    }
+    .pill{
+      padding:12px 12px; border-radius:16px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.05);
+      color: var(--muted);
+      font-weight:600;
+    }
+    .pill b{color:var(--text)}
+
+    /* Quote card */
+    .quote-card{display:flex; flex-direction:column; gap:14px;}
+    .quote-card h2{margin:0; font-size:18px; letter-spacing:-.2px;}
+    .form{
+      display:grid; gap:10px;
+    }
+    label{font-size:12px; color: var(--muted); font-weight:700;}
+    input, textarea, select{
+      width:100%; padding:12px 12px; border-radius:14px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(0,0,0,.18);
+      color: var(--text);
+      outline:none;
+    }
+    textarea{min-height:92px; resize:vertical}
+    input:focus, textarea:focus, select:focus{border-color: rgba(74,222,128,.60); box-shadow: 0 0 0 4px rgba(74,222,128,.12)}
+    .help{font-size:12px; color: var(--muted); margin-top:-2px}
+
+    /* Sections */
+    section{padding: 18px 0;}
+    .grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px;}
+    .card{
+      border-radius: var(--radius);
+      border:1px solid var(--line);
+      background: rgba(16,24,38,.70);
+      box-shadow: 0 10px 30px rgba(0,0,0,.28);
+      padding: 18px;
+    }
+    .card h3{margin:0 0 6px; font-size:16px;}
+    .card p{margin:0; color:var(--muted)}
+
+    .section-title{display:flex; align-items:flex-end; justify-content:space-between; gap:12px; margin: 8px 0 10px;}
+    .section-title h2{margin:0; font-size:22px; letter-spacing:-.4px;}
+    .section-title p{margin:0; color:var(--muted)}
+
+    /* Pricing */
+    .pricing{display:grid; grid-template-columns: 1fr 1fr; gap:14px;}
+    .price-row{display:flex; justify-content:space-between; gap:12px; padding:10px 0; border-bottom:1px solid rgba(255,255,255,.08)}
+    .price-row:last-child{border-bottom:none}
+    .price-row span{color:var(--muted)}
+    .price-row b{font-variant-numeric: tabular-nums}
+
+    /* FAQ */
+    details{
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      border-radius: 16px;
+      padding: 12px 14px;
+    }
+    details summary{cursor:pointer; font-weight:800;}
+    details p{margin:10px 0 0; color:var(--muted)}
+    .faq{display:grid; gap:10px}
+
+    /* Footer */
+    footer{padding: 26px 0 34px; border-top:1px solid var(--line); margin-top:16px; color:var(--muted)}
+    .foot{display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:space-between;}
+    .small{font-size:12px;}
+
+    /* Responsive */
+    @media (max-width: 920px){
+      .hero-grid{grid-template-columns:1fr;}
+      h1{font-size:38px}
+      nav ul{display:none}
+    }
+    @media (max-width: 720px){
+      .grid3{grid-template-columns:1fr;}
+      .pricing{grid-template-columns:1fr}
+      .mini{grid-template-columns:1fr}
+    }
+  </style>
+
+  <!-- LocalBusiness schema (replace placeholders) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "JD’s Heavy Junk Removal",
+    "areaServed": "San Antonio, TX",
+    "description": "San Antonio startup junk removal & haul-off. Small-to-medium pickups now as we scale into full heavy capacity.",
+    "telephone": "210-383-0127",
+    "email": "jd@jdsheavyjunk.com",
+    "url": "REPLACE_WITH_WEBSITE_URL"
+  }
+  </script>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="JD’s Heavy Junk Removal Home">
+      <div class="mark">JD</div>
+      <span>JD’s Heavy Junk Removal</span>
+    </a>
+
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-cta">
+      <a class="btn" href="#contact">Message for Quote</a>
+      <a class="btn primary" href="tel:210-383-0127">Call/Text</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div class="hero-grid">
+
+      <section class="hero-card" aria-label="Hero">
+        <div class="kicker"><span class="dot"></span>Local, family-run startup • San Antonio</div>
+        <h1>Junk removal & haul‑off — small‑to‑medium pickups now, scaling fast.</h1>
+        <p class="sub">
+          We’re building JD’s Heavy Junk Removal from the ground up. We handle the tough cleanouts — garages, attics, move‑out leftovers —
+          and reinvest every job into expanding equipment capacity.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="#contact">Get a Photo Quote</a>
+          <a class="btn" href="#pricing">See Pricing Ranges</a>
+          <a class="btn" href="#services">What We Take</a>
+        </div>
+
+        <div class="mini" aria-label="Quick facts">
+          <div class="pill"><b>Fast quotes:</b> send photos + zip code</div>
+          <div class="pill"><b>Clear scope:</b> no hazardous waste</div>
+          <div class="pill"><b>Best for:</b> small cleanouts & pickups</div>
+          <div class="pill"><b>Service area:</b> San Antonio + nearby</div>
+        </div>
+      </section>
+
+      <aside class="hero-card quote-card" id="contact" aria-label="Quick Quote">
+        <h2>Quick Quote (2 minutes)</h2>
+        <p class="help">Send photos by text/Messenger for the fastest estimate.</p>
+
+        <form class="form" action="mailto:jd@jdsheavyjunk.com" method="post" enctype="text/plain">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" placeholder="Your name" autocomplete="name" />
+          </div>
+          <div>
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" placeholder="(210) 555-0123" autocomplete="tel" />
+          </div>
+          <div>
+            <label for="zip">Zip code</label>
+            <input id="zip" name="zip" placeholder="78240" inputmode="numeric" />
+          </div>
+          <div>
+            <label for="service">What do you need removed?</label>
+            <textarea id="service" name="details" placeholder="Example: garage clutter + a couch + 3 bags. Include stairs/access notes."></textarea>
+          </div>
+          <div class="hero-actions">
+            <button class="btn primary" type="submit">Email Quote Request</button>
+            <a class="btn" href="tel:210-383-0127">Call/Text Now</a>
+          </div>
+          <p class="help">Tip: include 3–5 photos for the most accurate quote.</p>
+        </form>
+      </aside>
+
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="section-title">
+        <div>
+          <h2>Services</h2>
+          <p>Startup capacity right now is best for small-to-medium pickups and cleanouts.</p>
+        </div>
+      </div>
+
+      <div class="grid3">
+        <div class="card">
+          <h3>Small junk pickups</h3>
+          <p>Furniture, boxes, bags, small loads, and “get this out of my house” jobs.</p>
+        </div>
+        <div class="card">
+          <h3>Garage & attic cleanouts</h3>
+          <p>Decluttering, move-out leftovers, storage cleanouts, and curb-ready pile-outs.</p>
+        </div>
+        <div class="card">
+          <h3>Light debris haul-off</h3>
+          <p>Non-hazardous debris and bagged waste. Heavy debris is quoted separately.</p>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:14px;">
+        <h3>What we don’t take</h3>
+        <p>
+          No hazardous waste, unknown liquids, chemicals, fuels, or anything leaking. If you’re unsure, ask — we’ll point you to the right drop-off option.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="wrap">
+      <div class="section-title">
+        <div>
+          <h2>Pricing ranges</h2>
+          <p>Quotes depend on volume, access (stairs/distance), and disposal fees. These are typical ranges.</p>
+        </div>
+      </div>
+
+      <div class="pricing">
+        <div class="card">
+          <h3>Volume-based (most jobs)</h3>
+          <div class="price-row"><span>Minimum pickup</span><b>$100–$175</b></div>
+          <div class="price-row"><span>Small load (~1/4)</span><b>$200–$350</b></div>
+          <div class="price-row"><span>Medium load (~1/2)</span><b>$300–$500</b></div>
+          <div class="price-row"><span>Large load (~3/4)</span><b>$450–$700</b></div>
+          <div class="price-row"><span>Full load</span><b>$600–$900</b></div>
+          <p class="help">For the fastest quote: photos + zip code + any stairs/access notes.</p>
+        </div>
+
+        <div class="card">
+          <h3>Common add-ons</h3>
+          <div class="price-row"><span>Mattress / box spring</span><b>+$50–$125</b></div>
+          <div class="price-row"><span>Tires (varies)</span><b>+$25–$75</b></div>
+          <div class="price-row"><span>Appliances</span><b>+$25–$200</b></div>
+          <div class="price-row"><span>Electronics / TVs</span><b>+$25–$150</b></div>
+          <div class="price-row"><span>Outside core area</span><b>+$25–$150</b></div>
+          <p class="help">Heavy debris (concrete/dirt/shingles/tile) is quoted separately when weight drives disposal cost.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="section-title">
+        <div>
+          <h2>How it works</h2>
+          <p>Simple process. Clear expectations.</p>
+        </div>
+      </div>
+
+      <div class="grid3">
+        <div class="card">
+          <h3>1) Send photos</h3>
+          <p>Text or message 3–5 photos plus your zip code and a short description.</p>
+        </div>
+        <div class="card">
+          <h3>2) Get a quote</h3>
+          <p>We confirm volume tier + any add-ons (mattress/tires/appliances) and schedule a pickup window.</p>
+        </div>
+        <div class="card">
+          <h3>3) We load & haul</h3>
+          <p>We remove the items and dispose properly. You get your space back — fast.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-title">
+        <div>
+          <h2>FAQ</h2>
+          <p>Quick answers to common questions.</p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <details>
+          <summary>Are you fully “heavy” capacity yet?</summary>
+          <p>We’re a startup. Right now we’re best for small-to-medium pickups and cleanouts while we reinvest into expanded capacity (truck/trailer).</p>
+        </details>
+        <details>
+          <summary>What do you need for a photo quote?</summary>
+          <p>3–5 photos, your zip code, and any access notes (stairs, long carry distance, tight parking). That’s usually enough for a fast estimate.</p>
+        </details>
+        <details>
+          <summary>Do you take hazardous waste?</summary>
+          <p>No. We don’t handle hazardous materials, unknown liquids, chemicals, or anything leaking. If you’re unsure, message us and we’ll advise on the right drop-off option.</p>
+        </details>
+        <details>
+          <summary>How do payments work?</summary>
+          <p>Set your payment method here (cash, card, Zelle, etc.). If you’re not sure, keep it simple and add details later.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <div class="mark" style="width:34px;height:34px;border-radius:12px;">JD</div>
+        <div>
+          <div style="font-weight:800;color:var(--text)">JD’s Heavy Junk Removal</div>
+          <div class="small">San Antonio, TX • <a href="tel:210-383-0127">210-383-0127</a> • <a href="mailto:jd@jdsheavyjunk.com">jd@jdsheavyjunk.com</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="small">© <span id="year"></span> JD’s Heavy Junk Removal. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
